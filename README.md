@@ -1,12 +1,12 @@
 
-# Integration Test Case Generator (Google ADK + Gemini)
+# Integration Test Case Generator (Google ADK + Gemma)
 
 ## Overview
 This project automatically generates integration test cases from:
 - User Stories
 - OpenAPI / Swagger API contracts
 
-It uses **Google ADK (Agent Development Kit)** for orchestration and **Gemini** only for ambiguity resolution and scenario expansion.
+It uses **Google ADK (Agent Development Kit)** for orchestration and **Gemma:2b model** only for ambiguity resolution and scenario expansion.
 
 ## Architecture
 - Deterministic parsing first
@@ -16,7 +16,7 @@ It uses **Google ADK (Agent Development Kit)** for orchestration and **Gemini** 
 ## Tech Stack
 - Python 3.11
 - Google ADK
-- Gemini 1.5 Pro / Flash
+- Ollama backend(gemma:2b)
 - FastAPI (optional extension)
 - OpenAPI tools
 
@@ -28,14 +28,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Environment Variables
-
-Create `.env` file:
-
-```env
-GEMINI_API_KEY=your_api_key_here
-```
-
 ## Execution
 
 ```bash
@@ -45,7 +37,3 @@ python orchestrator.py       --stories samples/user_stories.txt       --openapi 
 ## Output
 - Abstract integration test cases
 - Framework exporters can be added (Postman, PyTest, Karate)
-
-## Notes
-- Gemini never parses OpenAPI
-- All hallucinations are rejected via validation gates
