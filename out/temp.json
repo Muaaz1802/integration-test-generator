@@ -1,0 +1,53 @@
+{
+  "name": "Sample Integration Test",
+  "steps": [
+    {
+      "story_id": "US-4e4ed2c4",
+      "type": "happy_path",
+      "endpoint": { "method": "POST", "path": "/auth/register" },
+      "expected_status": 200
+    },
+    {
+      "story_id": "US-4e4ed2c4",
+      "type": "unauthorized",
+      "endpoint": { "method": "POST", "path": "/auth/register" },
+      "expected_status": 401
+    },
+    {
+      "story_id": "US-4e4ed2c4",
+      "type": "happy_path",
+      "endpoint": { "method": "POST", "path": "/auth/login" },
+      "expected_status": 200
+    },
+    {
+      "story_id": "US-4e4ed2c4",
+      "type": "unauthorized",
+      "endpoint": { "method": "POST", "path": "/auth/login" },
+      "expected_status": 401
+    },
+    {
+      "story_id": "US-4e4ed2c4",
+      "type": "happy_path",
+      "endpoint": { "method": "GET", "path": "/users/me" },
+      "expected_status": 200
+    },
+    {
+      "story_id": "US-4e4ed2c4",
+      "type": "unauthorized",
+      "endpoint": { "method": "GET", "path": "/users/me" },
+      "expected_status": 401
+    },
+    {
+      "story_id": "US-4e4ed2c4",
+      "type": "happy_path",
+      "endpoint": { "method": "PUT", "path": "/users/me" },
+      "expected_status": 200
+    },
+    {
+      "story_id": "US-4e4ed2c4",
+      "type": "unauthorized",
+      "endpoint": { "method": "PUT", "path": "/users/me" },
+      "expected_status": 401
+    }
+  ]
+}

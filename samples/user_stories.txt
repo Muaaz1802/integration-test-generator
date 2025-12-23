@@ -1,0 +1,46 @@
+User Story 1: User Registration
+As a new user
+I want to register using my email and password
+So that I can access the system
+
+Acceptance Criteria:
+- User provides valid email and password
+- System creates a new user account
+- System returns a success response with user ID
+- If email already exists, system returns an error
+
+
+User Story 2: User Login
+As a registered user
+I want to log in using my credentials
+So that I can access protected features
+
+Acceptance Criteria:
+- User provides correct email and password
+- System authenticates the user
+- System returns an access token
+- If credentials are invalid, system denies access
+
+
+User Story 3: Fetch User Profile
+As a logged-in user
+I want to fetch my profile details
+So that I can view my account information
+
+Acceptance Criteria:
+- User must be authenticated
+- System validates the access token
+- System returns user profile data
+- If token is missing or invalid, system returns unauthorized error
+
+
+User Story 4: Update User Profile
+As a logged-in user
+I want to update my profile information
+So that my data stays current
+
+Acceptance Criteria:
+- User must be authenticated
+- System accepts updated profile fields
+- System saves changes successfully
+- System returns updated profile data
